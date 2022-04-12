@@ -1,1 +1,7 @@
 folder-builder.sh
+
+*-main.cs
+
+bin/
+
+obj/
