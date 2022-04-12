@@ -8,9 +8,7 @@ namespace _2_print_alphabet
         {
             int i = 97;
             for (;i < 123; i++) {
-                if ((char)i == 'q' || (char)i == 'e')
-                    Console.Write("");
-                else
+                if ((char)i != 'q' && (char)i != 'e')
                     Console.Write("{0}", (char)i);
             }
         }
