@@ -5,13 +5,13 @@ class Dictionary
 {
     public static Dictionary<string, string> AddKeyValue(Dictionary<string, string> myDict, string key, string value)
     {
-        bool tag = false;
-        foreach ((string itemKey, string itemValue) in myDict)
+        bool flag = false;
+        foreach (KeyValuePair<string, string> entry in myDict)
         {
-            if (key == itemValue)
-                tag = true;
+            if(entry.Key == key)
+                flag = true;
         }
-        if (tag)
+        if(flag)
             myDict[key] = value;
         else
             myDict.Add(key, value);
