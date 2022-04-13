@@ -14,12 +14,10 @@ class Array
             Console.WriteLine();
             return;
         }
-        int[] newArray = new int[array.Length];
-        // int[] newArray = array;
-        for (int i = array.Length - 1, j = 0; i >= 0 || j < array.Length; i--, j++)
+
+        for (int i = array.Length - 1; i >= 0 ; i--)
         {
-            newArray[j] = array[i];
-            Console.Write(newArray[j]);
+            Console.Write(array[i]);
             if (i != 0)
                 Console.Write(" ");
         }
