@@ -7,7 +7,7 @@ class List
     {
         List<int> results = new List<int> ();
 
-        for (int i = 0; i < (list1.Count >= list2.Count ? list1.Count : list2.Count); i++)
+        for (int i = 0; i < listLength; i++)
         {
             try
             {
