@@ -8,11 +8,11 @@ namespace MyMath
     {
         /// <sumary>
         /// Method that return the max integer
-        /// <param name="num"> List of integeres </param> 
+        /// <param name="nums"> List of integeres </param> 
         /// </sumary>
         public static int Max(List<int> nums)
         {
-            if (nums.Count == 0)
+            if (nums == null || nums.Count == 0)
                 return 0;
 
             int number = Int32.MinValue;
