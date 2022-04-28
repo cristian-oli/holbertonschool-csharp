@@ -9,3 +9,5 @@ obj/
 dotnet-sdk-3.1.417-linux-x64.tar.gz
 
 set-dotnet.sh
+
+folder-builder-tests.sh
