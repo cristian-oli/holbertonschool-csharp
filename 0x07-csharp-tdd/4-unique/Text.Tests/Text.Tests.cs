@@ -20,6 +20,13 @@ namespace Text.Tests
         }
 
         [Test]
+        public void UniqueChar_Char_ReturnIndex()
+        {
+            int result = Str.UniqueChar("a");
+            Assert.AreEqual(result, 0);
+        }
+
+        [Test]
         public void UniqueChar_EmptyString_ReturnMinusOne()
         {
             int result = Str.UniqueChar("");
