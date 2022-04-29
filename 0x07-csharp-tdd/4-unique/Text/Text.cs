@@ -12,9 +12,12 @@ namespace Text
         /// </sumary>
         public static int UniqueChar(string s)
         {
-            for (int i = 0; i < s.Length; i++)
+            if (s == "")
+                return -1;
+            char[] array = s.ToCharArray();
+            for (int i = 0; i < array.Length; i++)
             {
-                int count = s.Count(f => (f == s[i]));
+                int count = array.Count(f => (f == s[i]));
                 if (count == 1)
                     return i;
             }
