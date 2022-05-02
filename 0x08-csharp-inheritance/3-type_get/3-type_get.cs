@@ -13,18 +13,20 @@ class Obj
     /// </sumary>
     public static void Print(object myObj)
     {
-        TypeInfo type = myObj.GetType().GetTypeInfo();
-        IEnumerable<PropertyInfo> pList = type.DeclaredProperties;
-        IEnumerable<MethodInfo> mList = type.DeclaredMethods;
-        Console.WriteLine("{0} Properties:", type.Name);
+        Type type = myObj.GetType();
+        TypeInfo typeInfo = type.GetTypeInfo();
+        IEnumerable<PropertyInfo> pList = typeInfo.GetProperties();
+        IEnumerable<MethodInfo> mList = typeInfo.GetMethods();
+        System.Console.WriteLine("{0} Properties:", typeInfo.Name);
         foreach (PropertyInfo element in pList)
         {
-            Console.WriteLine(element.Name);
+            System.Console.WriteLine(element.Name);
         }
-        Console.WriteLine("{0} Methods:", type.Name);
+        
+        System.Console.WriteLine("{0} Methods:", typeInfo.Name);
         foreach (MethodInfo element in mList)
         {
-            Console.WriteLine(element.Name);
+            System.Console.WriteLine(element.Name);
         }
     }
 }
